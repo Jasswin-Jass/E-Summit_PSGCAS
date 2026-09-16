@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "about": "About",
+    "agenda": "Agenda",
+    "speakers": "Speakers",
+    "tickets": "Tickets",
+    "sponsors": "Sponsors",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "register": "Register Now"
+  },
+  "hero": {
+    "title": "Welcome to E-Summit '26",
+    "subtitle": "The premier flagship entrepreneurship summit by PSGCAS, bringing together innovators, creators, and business leaders.",
+    "cta_register": "Get Your Ticket",
+    "cta_agenda": "View Schedule",
+    "trust_text": "Trusted by leading organizations worldwide"
+  },
+  "about": {
+    "title": "About The Summit",
+    "description": "E-Summit '26 is designed to foster the entrepreneurial spirit among students and professionals. Join us for 3 days of intense learning, networking, and innovation.",
+    "card_1_title": "Network",
+    "card_1_desc": "Connect with over 500+ attendees and industry leaders.",
+    "card_2_title": "Learn",
+    "card_2_desc": "Attend 20+ workshops and keynote sessions.",
+    "card_3_title": "Grow",
+    "card_3_desc": "Pitch your ideas and secure funding for your startup."
+  },
+  "agenda": {
+    "title": "Event Schedule",
+    "day1": "Day 1 - Foundation",
+    "day2": "Day 2 - Innovation",
+    "day3": "Day 3 - Execution"
+  },
+  "speakers": {
+    "title": "Keynote Speakers",
+    "subtitle": "Learn from the brightest minds in the industry."
+  },
+  "tickets": {
+    "title": "Pricing Plans",
+    "student": "Student Pass",
+    "professional": "Professional Pass",
+    "vip": "VIP Access",
+    "buy": "Buy Ticket"
+  },
+  "sponsors": {
+    "title": "Our Partners"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "description": "Empowering the next generation of entrepreneurs.",
+    "links": "Quick Links",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "© 2026 E-Summit PSGCAS. All rights reserved."
+  }
+}
