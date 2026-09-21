@@ -98,7 +98,7 @@ export const contactGuideCategories: ContactGuideCategory[] = [
     ],
     actionLink: {
       label: 'Techkathon Portal',
-      url: 'https://scan.page/L4GJ7l'
+      url: 'https://psghackathon.netlify.app/'
     }
   },
   {

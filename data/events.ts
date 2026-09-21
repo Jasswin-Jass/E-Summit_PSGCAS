@@ -7,7 +7,7 @@ import { EventItem } from '../types/event';
 export const REGISTRATION_URL_ELAMPRENEUR = "https://forms.gle/eFLXjMyCi28LgnPP8";
 export const REGISTRATION_URL_COPYRIGHTS_TRADEMARK = "https://forms.gle/qUwrGBKCST9mjKRb8";
 export const REGISTRATION_URL_FINTECH_HACKATHON = "https://docs.google.com/forms/d/e/1FAIpQLSeFfbq7b70bSsQ2_VgjSMn7xdWlUxJT_xIhWK24blqwKnnDuw/viewform";
-export const REGISTRATION_URL_TECHKATHON = "https://scan.page/L4GJ7l";
+export const REGISTRATION_URL_TECHKATHON = "https://psghackathon.netlify.app/";
 export const REGISTRATION_URL_DIGITAL_TOOLS = "https://forms.gle/eex2KiAkAhSUFYd89";
 export const REGISTRATION_URL_PSG_CASPRENEURS = "https://scan.page/P8s4fe";
 export const REGISTRATION_URL_BID_BIZZ = "https://forms.gle/7vpNQD3wbSWRMdDR6";
