@@ -9,7 +9,8 @@ import {
   REGISTRATION_URL_CASEQUEST,
   REGISTRATION_URL_ISUMMIT,
   REGISTRATION_URL_PSG_CASPRENEURS,
-  REGISTRATION_URL_ALL_PASSES
+  REGISTRATION_URL_ALL_PASSES,
+  REGISTRATION_URL_IPO_STOCKS_POSTER
 } from './events';
 
 export const scheduleData: ScheduleItem[] = [
@@ -91,6 +92,18 @@ export const scheduleData: ScheduleItem[] = [
     eventSlug: 'digital-tools',
     registrationStatus: 'open',
     registrationLink: REGISTRATION_URL_DIGITAL_TOOLS
+  },
+  {
+    id: 's2-ipo-stocks-poster',
+    time: '9:00 AM',
+    title: 'National Level IPO & Stocks Poster Presentation Competition',
+    description: 'National offline poster presentation competition on IPO valuation, regulatory framework, and stock market investments. Cash prize pool of ₹40,000/-, certificates, lunch & Free Platinum Passes.',
+    venue: 'School of Commerce, PSGCAS',
+    category: 'Competition',
+    day: 2,
+    eventSlug: 'ipo-stocks-poster-presentation',
+    registrationStatus: 'open',
+    registrationLink: REGISTRATION_URL_IPO_STOCKS_POSTER
   },
 
   // --------------------------------------------------------------------------

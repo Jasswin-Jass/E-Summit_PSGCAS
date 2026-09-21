@@ -23,7 +23,7 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
       date: '29 SEPTEMBER 2026',
       weekday: 'Tuesday',
       theme: 'BUILD | COLLABORATE | INNOVATE',
-      summary: 'Flagship technology and finance sprints: Techkathon 2K26, FinTech Hackathon 2026, and Digital Tools for Business Workshop.'
+      summary: 'Flagship technology and finance sprints: Techkathon 2K26, FinTech Hackathon 2026, IPO & Stocks Poster Presentation, and Digital Tools Workshop.'
     },
     3: {
       date: '30 SEPTEMBER 2026',

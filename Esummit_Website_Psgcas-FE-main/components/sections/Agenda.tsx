@@ -94,11 +94,11 @@ export default function Agenda({ dict }: { dict?: any }) {
                 </div>
                 <div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-center justify-between pb-space-xs">
-                    <span className="font-label-sm text-label-sm text-secondary font-bold uppercase">09:00 AM — 12:00 PM • COMMERCE QUADRANGLE</span>
-                    <span className="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-[11px] font-semibold">Exhibition</span>
+                    <span className="font-label-sm text-label-sm text-secondary font-bold uppercase">09:00 AM ONWARDS • SCHOOL OF COMMERCE</span>
+                    <span className="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-[11px] font-semibold">Competition</span>
                   </div>
-                  <h5 className="font-title-lg text-title-lg text-primary font-bold">National IPO & Stocks Poster Presentation</h5>
-                  <p className="font-body-md text-body-md text-on-surface-variant pt-space-xs">Inter-university teams analyze recent market listings, valuation anomalies, and capital market dynamics before an esteemed panel of certified financial analysts.</p>
+                  <h5 className="font-title-lg text-title-lg text-primary font-bold">National Level IPO & Stocks Poster Presentation Competition</h5>
+                  <p className="font-body-md text-body-md text-on-surface-variant pt-space-xs">Inter-collegiate poster competition organized by Department of Commerce covering IPO mechanics, valuation, and stock investments. ₹40,000 cash prize pool, awards, lunch & Free Platinum Passes.</p>
                 </div>
                 <div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-center justify-between pb-space-xs">

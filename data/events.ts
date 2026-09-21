@@ -14,6 +14,7 @@ export const REGISTRATION_URL_BID_BIZZ = "https://forms.gle/7vpNQD3wbSWRMdDR6";
 export const REGISTRATION_URL_CASEQUEST = "https://forms.gle/7vpNQD3wbSWRMdDR6";
 export const REGISTRATION_URL_ISUMMIT = "https://forms.gle/7vpNQD3wbSWRMdDR6";
 export const REGISTRATION_URL_ALL_PASSES = "https://forms.gle/7vpNQD3wbSWRMdDR6";
+export const REGISTRATION_URL_IPO_STOCKS_POSTER = "https://docs.google.com/forms/d/e/1FAIpQLSdIfJzAbubRQqKHZrwkPVu2DEczR3WCyl9yS_01EyTDaevZKA/viewform";
 
 // Legacy aliases for backwards compatibility
 export const GOOGLE_FORM_COPYRIGHTS_TRADEMARK = REGISTRATION_URL_COPYRIGHTS_TRADEMARK;
@@ -24,6 +25,7 @@ export const GOOGLE_FORM_DIGITAL_TOOLS = REGISTRATION_URL_DIGITAL_TOOLS;
 export const GOOGLE_FORM_CASPRENEURS = REGISTRATION_URL_PSG_CASPRENEURS;
 export const GOOGLE_FORM_BID_BIZZ = REGISTRATION_URL_BID_BIZZ;
 export const GOOGLE_FORM_ISUMMIT = REGISTRATION_URL_ISUMMIT;
+export const GOOGLE_FORM_IPO_STOCKS_POSTER = REGISTRATION_URL_IPO_STOCKS_POSTER;
 
 // ============================================================================
 // COMPREHENSIVE EVENTS REGISTRY — PSGCAS E-SUMMIT 2026
@@ -40,7 +42,7 @@ export const eventsData: EventItem[] = [
     subtitle: 'Regional Level School Innovation Competitions',
     tagline: 'Fostering the Next Generation of Visionary Innovators',
     description: 'Premier regional-level school innovation competitions featuring Shark Talk idea presentation, Model Mania prototypes, and Doodlix art competition.',
-    longDescription: "Elampreneur'26 provides school students with a prestigious collegiate platform to express breakthrough ideas and prototypes for real-world challenges across technology, sustainable development, and climate action. Organized by Centre for Innovation Incubation & Entrepreneurship (CII&E) in association with IIC and E-Cell PSGCAS.",
+    longDescription: "Elampreneur'26 provides school students with a High Impact Innovation Platform to express breakthrough ideas and prototypes for real-world challenges across technology, sustainable development, and climate action. Organized by Centre for Innovation Incubation & Entrepreneurship (CII&E) in association with IIC and E-Cell PSGCAS.",
     day: 1,
     dateString: '28 September 2026',
     dayOfWeek: 'Monday',
@@ -280,6 +282,82 @@ export const eventsData: EventItem[] = [
     ],
     registrationLink: REGISTRATION_URL_DIGITAL_TOOLS
   },
+  {
+    id: 'ipo-stocks-poster-presentation',
+    slug: 'ipo-stocks-poster-presentation',
+    title: 'National Level IPO & Stocks Poster Presentation Competition',
+    subtitle: 'Organised by Department of Commerce • In association with CII&E, IIC & E-Cell PSGCAS',
+    tagline: 'Navigating Public Markets, Valuations & Modern Investment Landscapes',
+    description: 'National-level poster presentation competition organized by the Department of Commerce covering IPO processes, regulatory frameworks, stock market fundamentals, and financial investments.',
+    longDescription: 'Organized by Department of Commerce in association with Centre for Innovation Incubation & Entrepreneurship (CII&E), Institution’s Innovation Council & E-Cell PSGCAS. A premier national offline competitive platform for UG, PG students, and Research Scholars across India to present cutting-edge analytical research, valuation frameworks, and market insights across two tracks: Track A (Initial Public Offering) and Track B (Stock Market & Financial Investment).',
+    day: 2,
+    dateString: '29 September 2026',
+    dayOfWeek: 'Tuesday',
+    time: '9:00 AM',
+    venue: 'School of Commerce, PSGCAS',
+    category: 'Competition',
+    posterUrl: '/images/events/ipo-stocks-poster.png',
+    additionalPosters: ['/images/events/ipo-stocks-poster_p2.png'],
+    eligibility: 'UG, PG students & Research Scholars from recognised colleges/universities in India',
+    teamSize: 'Individual or maximum 2 members',
+    prizePool: 'Cash Prize Pool of ₹40,000/- & Awards',
+    registrationDeadline: '23 September 2026',
+    perks: [
+      'Cash prize Pool of Rs. 40,000/- & Awards',
+      'Free Platinum Passes for Final Day of E-Summit - 30th Sept. 2026 (incl. Investor Incubator Summit, access to Entrepreneurs Carnival, Startup Competitions, High Profile Speakers Sessions & many)',
+      'Certificates, ID Cards, Refreshments & Lunch for all the participants'
+    ],
+    themes: [
+      'Track A: IPO Process & Regulatory Framework',
+      'Track A: Valuation, Pricing & Allotment Mechanics',
+      'Track A: Key Intermediaries & Investor Participation',
+      'Track A: Risk, Rating & Price Stabilisation',
+      'Track A: Market Trends & Real-World Cases',
+      'Track B: Stock Market Fundamentals & Analysis',
+      'Track B: Investment Instruments & Portfolio Management',
+      'Track B: Investor Behaviour & Emerging Investing Trends',
+      'Track B: Digital Assets & Technology in Markets',
+      'Track B: Regulation & Financial Inclusion'
+    ],
+    subEvents: [
+      {
+        name: 'Track A — IPO (Initial Public Offering)',
+        target: 'UG, PG Students & Research Scholars • Individual or Max 2 Members',
+        details: 'Sub-themes: IPO Process & Regulatory Framework | Valuation, Pricing & Allotment Mechanics | Key Intermediaries & Investor Participation | Risk, Rating & Price Stabilisation | Market Trends & Real-World Cases.'
+      },
+      {
+        name: 'Track B — Stock Market & Financial Investment',
+        target: 'UG, PG Students & Research Scholars • Individual or Max 2 Members',
+        details: 'Sub-themes: Stock Market Fundamentals & Analysis | Investment Instruments & Portfolio Management | Investor Behaviour & Emerging Investing Trends | Digital Assets & Technology in Markets | Regulation & Financial Inclusion.'
+      }
+    ],
+    rules: [
+      'Open to UG, PG students & Research Scholars from any recognised College/University in India.',
+      'Team size: Individual or Team of maximum 2 members. Only one entry per team; a student cannot be part of more than one team.',
+      'Participants may choose ONE sub-theme from either of the two tracks (Track A: IPO or Track B: Stock Market & Financial Investment).',
+      'Online registration with a short abstract (200–300 words) on the chosen sub-theme. Registration deadline: 23 September 2026.',
+      'Abstract screening & shortlisting by an expert review panel. Shortlisted teams will be notified and asked to submit the final soft-copy poster (PDF).',
+      'Final physical presentation with printed poster to be brought and displayed by participants at the venue (School of Commerce, PSGCAS) on 29 September 2026.',
+      'Poster Template Format: Portrait orientation, metric A0 size (33.1 x 46.8 inches / 84.1 x 118.9 cm). Single-page high-resolution PDF for screening.',
+      'Mandatory sections on poster: Title (bold, centred, max 2 lines), Team details (names, college, department, year of study, faculty mentor), Introduction/Background, Objectives, Main body (concept, analysis, data, case study/model supported by charts/infographics), Key findings/Insights, Conclusion/Recommendations, References (min 3, consistent citation style).',
+      'Presentation Timing: Approx. 5 minutes for presentation + 3 minutes for Q&A before the jury panel.',
+      'Design Guidance: Title 36–44 pt; section headings 24–28 pt; body text 18–20 pt (readable from ~2m); favour diagrams, charts and infographics over dense paragraphs; college & event logo on top corners; credit external data properly.',
+      'Faculty mentor name recommended to be mentioned at registration. Valid college ID card must be carried on the event day. Substitution of team members after confirmation of registration is not permitted.'
+    ],
+    highlights: [
+      'Track A: IPO (Initial Public Offering) & Track B: Stock Market & Financial Investment',
+      'Cash Prize Pool of Rs. 40,000/- & Awards',
+      'Free Platinum Passes for Final Day of E-Summit (30th Sept 2026)',
+      'Certificates, ID Cards, Refreshments & Lunch for all participants',
+      'Offline physical poster evaluation before an esteemed jury panel'
+    ],
+    coordinators: [
+      { name: 'Department of Commerce', role: 'Organizing Department, PSGCAS' },
+      { name: 'Centre for Innovation Incubation & Entrepreneurship (CII&E)', role: 'Organizing Body' },
+      { name: 'Institution’s Innovation Council & E-Cell', role: 'In Association With' }
+    ],
+    registrationLink: REGISTRATION_URL_IPO_STOCKS_POSTER
+  },
 
   // --------------------------------------------------------------------------
   // DAY 3: 30 SEPTEMBER 2026 (WEDNESDAY)
@@ -457,5 +535,10 @@ export const eventsData: EventItem[] = [
 ];
 
 export function getEventBySlug(slug: string): EventItem | undefined {
-  return eventsData.find((e) => e.slug === slug || e.id === slug);
+  return eventsData.find(
+    (e) =>
+      e.slug === slug ||
+      e.id === slug ||
+      (e.slug === 'ipo-stocks-poster-presentation' && slug === 'ipo-stocks-poster')
+  );
 }
