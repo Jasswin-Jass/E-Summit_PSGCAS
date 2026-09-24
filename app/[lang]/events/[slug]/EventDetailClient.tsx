@@ -247,6 +247,12 @@ export default function EventDetailClient({
               <span className="px-3.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-xs uppercase font-extrabold tracking-wider shadow-sm">
                 {event.category}
               </span>
+              {event.isRegistrationClosed && (
+                <span className="px-3.5 py-1 rounded-full bg-rose-600 text-white font-label-sm text-xs uppercase font-extrabold tracking-wider shadow-sm flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[15px]">lock</span>
+                  <span>REGISTRATIONS CLOSED</span>
+                </span>
+              )}
               {event.isDay3PassEvent && (
                 <span className="px-3.5 py-1 rounded-full bg-sky-600 text-white font-label-sm text-xs uppercase font-extrabold tracking-wider shadow-sm flex items-center gap-1">
                   <span className="material-symbols-outlined text-[14px]">confirmation_number</span>
@@ -341,16 +347,27 @@ export default function EventDetailClient({
             </div>
 
             {/* Primary Registration Call to Action Card */}
-            <div id="register" className="p-6 rounded-2xl bg-white border-2 border-secondary/40 shadow-lg flex flex-col gap-4">
+            <div id="register" className={`p-6 rounded-2xl bg-white border-2 ${event.isRegistrationClosed ? 'border-rose-300' : 'border-secondary/40'} shadow-lg flex flex-col gap-4`}>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-gray-100">
                 <div>
-                  <h4 className="font-title-lg text-lg sm:text-xl font-extrabold text-primary uppercase">
-                    {event.isDay3PassEvent ? 'Day 3 Pass Access' : 'Official Event Registration'}
-                  </h4>
-                  <p className="text-xs text-on-surface-variant">
-                    {event.isDay3PassEvent
-                      ? `Access to ${event.title} requires a verified ${event.requiredPassTier} Pass.`
-                      : 'Submit your entry directly through the official summit portal.'}
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-title-lg text-lg sm:text-xl font-extrabold text-primary uppercase">
+                      {event.isRegistrationClosed
+                        ? 'Registration Status'
+                        : (event.isDay3PassEvent ? 'Day 3 Pass Access' : 'Official Event Registration')}
+                    </h4>
+                    {event.isRegistrationClosed && (
+                      <span className="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 text-[11px] font-extrabold uppercase tracking-wide border border-rose-200">
+                        Closed
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-on-surface-variant pt-0.5">
+                    {event.isRegistrationClosed
+                      ? (event.closedMessage || 'Registrations for this event are now officially closed. No further applications are being accepted.')
+                      : (event.isDay3PassEvent
+                          ? `Access to ${event.title} requires a verified ${event.requiredPassTier} Pass.`
+                          : 'Submit your entry directly through the official summit portal.')}
                   </p>
                 </div>
                 {event.registrationFee && (
@@ -363,7 +380,12 @@ export default function EventDetailClient({
 
               {/* Action Button Row */}
               <div className="flex flex-col sm:flex-row gap-3">
-                {event.isDay3PassEvent ? (
+                {event.isRegistrationClosed ? (
+                  <div className="flex-1 py-3.5 px-6 rounded-xl bg-slate-100 border border-slate-300 text-slate-500 font-extrabold text-xs sm:text-sm uppercase tracking-wider text-center flex items-center justify-center gap-2 cursor-not-allowed select-none shadow-inner">
+                    <span className="material-symbols-outlined text-[20px] text-slate-400">lock</span>
+                    <span>REGISTRATIONS CLOSED</span>
+                  </div>
+                ) : event.isDay3PassEvent ? (
                   <>
                     <a
                       href={REGISTRATION_URL_COMMON_PASS}
@@ -410,13 +432,19 @@ export default function EventDetailClient({
               </div>
 
               {/* Deadlines & Notice */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-on-surface-variant bg-amber-50/70 p-3 rounded-xl border border-amber-200/60">
+              <div className={`flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] p-3 rounded-xl border ${event.isRegistrationClosed ? 'bg-rose-50/80 border-rose-200 text-rose-900' : 'bg-amber-50/70 border-amber-200/60 text-on-surface-variant'}`}>
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-amber-700 text-[18px] shrink-0">info</span>
-                  <span>Strictly no spot registrations. Carry genuine college / school photo ID on the summit day.</span>
+                  <span className={`material-symbols-outlined text-[18px] shrink-0 ${event.isRegistrationClosed ? 'text-rose-600' : 'text-amber-700'}`}>
+                    {event.isRegistrationClosed ? 'cancel' : 'info'}
+                  </span>
+                  <span>
+                    {event.isRegistrationClosed
+                      ? 'Registration deadline has passed. Selected ventures will be contacted directly for Day 3 proceedings.'
+                      : 'Strictly no spot registrations. Carry genuine college / school photo ID on the summit day.'}
+                  </span>
                 </div>
                 {event.registrationDeadline && (
-                  <span className="font-bold text-amber-900 shrink-0">
+                  <span className={`font-bold shrink-0 ${event.isRegistrationClosed ? 'text-rose-800' : 'text-amber-900'}`}>
                     Deadline: {event.registrationDeadline}
                   </span>
                 )}

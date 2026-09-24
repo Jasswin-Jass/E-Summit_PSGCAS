@@ -205,7 +205,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Ceremony',
     day: 3,
     eventSlug: 'psg-caspreneurs-2026',
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Silver',
     registrationLink: REGISTRATION_URL_PSG_CASPRENEURS
   },

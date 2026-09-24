@@ -270,9 +270,17 @@ export default function EventsExplorer({
                     <span className="px-2.5 py-1 rounded-full bg-primary/90 backdrop-blur-md text-surface-container-lowest font-label-sm text-[10px] uppercase font-bold tracking-wider border border-white/15 shadow">
                       DAY {event.day} • {event.dateString.split(' ')[0]} {event.dateString.split(' ')[1]}
                     </span>
-                    <span className="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-extrabold tracking-wider shadow">
-                      {event.category}
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      {event.isRegistrationClosed && (
+                        <span className="px-2.5 py-1 rounded-full bg-rose-600/95 backdrop-blur-md text-white font-label-sm text-[10px] uppercase font-black tracking-wider shadow border border-rose-400/30 flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[12px]">lock</span>
+                          <span>CLOSED</span>
+                        </span>
+                      )}
+                      <span className="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-extrabold tracking-wider shadow">
+                        {event.category}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Bottom Highlight Badges */}
@@ -338,7 +346,12 @@ export default function EventsExplorer({
                     <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </Link>
 
-                  {event.isDay3PassEvent ? (
+                  {event.isRegistrationClosed ? (
+                    <span className="px-3 py-1.5 rounded-lg bg-slate-200/90 text-slate-600 font-label-sm text-[11px] uppercase font-bold flex items-center gap-1 cursor-not-allowed select-none border border-slate-300">
+                      <span className="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                      <span>CLOSED</span>
+                    </span>
+                  ) : event.isDay3PassEvent ? (
                     <a
                       href={event.registrationLink}
                       target="_blank"

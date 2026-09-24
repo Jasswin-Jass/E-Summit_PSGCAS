@@ -132,15 +132,15 @@ export const contactGuideCategories: ContactGuideCategory[] = [
     id: 'startups',
     title: 'STARTUP / INVESTOR QUERIES',
     icon: 'rocket_launch',
-    description: 'PSG Caspreneurs ₹10,000 seed grants, Investor & Incubator Summit (I-Summit), angel networking, and incubation.',
+    description: 'PSG Caspreneurs ₹10,000 seed grants (Registrations Closed), Investor & Incubator Summit (I-Summit), angel networking, and incubation.',
     contacts: [
       { name: 'Thayashram S', role: 'Chairperson, IPR Cell (Caspreneurs)', phone: '6383117680', event: 'PSG Caspreneurs' },
       { name: 'Sowmya S', role: 'Chairperson, IPR Cell (Caspreneurs)', phone: '6380051807', event: 'PSG Caspreneurs' },
       { name: 'CII&E Incubation Desk', role: 'Centre for Innovation & Incubation', email: 'ecell@psgcas.ac.in', event: 'Incubation' },
     ],
     actionLink: {
-      label: 'Caspreneurs Registration',
-      url: 'https://scan.page/P8s4fe'
+      label: 'Caspreneurs Event Details (Closed)',
+      url: '/en/events/psg-caspreneurs-2026'
     }
   },
   {

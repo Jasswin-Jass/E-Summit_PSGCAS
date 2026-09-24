@@ -232,6 +232,23 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
                     </div>
                   )}
 
+                  {item.registrationStatus === 'closed' && (
+                    <div className="flex items-center gap-2">
+                      <span className="px-3 py-1 rounded-lg bg-rose-100 text-rose-800 border border-rose-300 font-label-sm text-xs font-bold uppercase flex items-center gap-1">
+                        <span className="material-symbols-outlined text-[14px]">lock</span>
+                        <span>Closed</span>
+                      </span>
+                      {item.eventSlug && (
+                        <Link
+                          href={`/${lang}/events/${item.eventSlug}`}
+                          className="px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-xs uppercase font-bold"
+                        >
+                          Details
+                        </Link>
+                      )}
+                    </div>
+                  )}
+
                   {item.registrationStatus === 'open_for_all' && (
                     <span className="px-3 py-1 rounded bg-green-100 text-green-800 font-label-sm text-xs font-bold uppercase">
                       Open to All Delegates

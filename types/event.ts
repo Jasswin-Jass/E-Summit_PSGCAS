@@ -42,6 +42,8 @@ export interface EventItem {
   isDay3PassEvent?: boolean;
   requiredPassTier?: 'Silver' | 'Gold' | 'Platinum' | 'Gold or Platinum';
   externalResourceUrl?: string;
+  isRegistrationClosed?: boolean;
+  closedMessage?: string;
 }
 
 export interface PassTier {
@@ -87,7 +89,7 @@ export interface ScheduleItem {
   category: string;
   day: 1 | 2 | 3;
   eventSlug?: string;
-  registrationStatus: 'open' | 'pass_required' | 'finalists_only' | 'open_for_all';
+  registrationStatus: 'open' | 'pass_required' | 'finalists_only' | 'open_for_all' | 'closed';
   requiredPass?: 'Silver' | 'Gold' | 'Platinum' | 'Gold or Platinum';
   registrationLink?: string;
 }

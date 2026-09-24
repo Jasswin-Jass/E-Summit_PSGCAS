@@ -170,15 +170,22 @@ export default async function RegisterPage({ params }: { params: Promise<{ lang:
                 </div>
 
                 <div className="flex sm:flex-col items-center gap-2 w-full sm:w-auto shrink-0">
-                  <a
-                    href={event.registrationLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-extrabold text-xs uppercase tracking-wider text-center hover:bg-secondary-fixed transition-colors shadow-sm flex items-center justify-center gap-1"
-                  >
-                    <span>Register Form</span>
-                    <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                  </a>
+                  {event.isRegistrationClosed ? (
+                    <div className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-slate-500 font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1 cursor-not-allowed select-none shadow-inner">
+                      <span className="material-symbols-outlined text-[14px] text-slate-400">lock</span>
+                      <span>Closed</span>
+                    </div>
+                  ) : (
+                    <a
+                      href={event.registrationLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-extrabold text-xs uppercase tracking-wider text-center hover:bg-secondary-fixed transition-colors shadow-sm flex items-center justify-center gap-1"
+                    >
+                      <span>Register Form</span>
+                      <span className="material-symbols-outlined text-[14px]">open_in_new</span>
+                    </a>
+                  )}
                   <Link
                     href={`/${lang}/events/${event.slug}`}
                     className="flex-1 sm:flex-none px-3 py-1.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs uppercase tracking-wider text-center transition-colors"
