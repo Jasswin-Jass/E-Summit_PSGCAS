@@ -518,7 +518,7 @@ export const eventsData: EventItem[] = [
     eligibility: 'Open to student founders and campus ventures of PSG College of Arts & Science.',
     teamSize: 'Student Startup Teams',
     prizePool: '₹10,000 Seed Grant for Top 7 Startups',
-    registrationDeadline: '16 September 2026 (Closed)',
+    registrationDeadline: '23 September 2026, 11:59 PM Midnight (Closed)',
     isRegistrationClosed: true,
     closedMessage: 'Registrations for PSG Caspreneurs 2026 are now officially closed. Selected student-led startups will be recognized during the Day 3 book release and seed grant ceremony.',
     perks: [
