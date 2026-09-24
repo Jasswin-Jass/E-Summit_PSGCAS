@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 let locales = ['en'];
 let defaultLocale = 'en';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Skip public files and api routes
