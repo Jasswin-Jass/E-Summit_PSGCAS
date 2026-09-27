@@ -91,7 +91,9 @@ export const eventsData: EventItem[] = [
       { name: 'Dr. Divya', phone: '+91 99652 99759', role: 'Faculty Coordinator' },
       { name: 'Elampreneur Desk', email: 'elampreneur@gmail.com', role: 'Enquiry Desk' }
     ],
-    registrationLink: REGISTRATION_URL_ELAMPRENEUR
+    registrationLink: REGISTRATION_URL_ELAMPRENEUR,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Elampreneur\'26 are now officially closed. Registered participants should report to the GRD Auditorium at 8:30 AM.'
   },
   {
     id: 'copyrights-trademark-workshop',
@@ -126,7 +128,9 @@ export const eventsData: EventItem[] = [
       { name: 'Sowmya S', phone: '+91 63800 51807', role: 'IPR Cell Coordinator' },
       { name: 'Chairperson, IPR Cell', role: 'IIC, PSGCAS' }
     ],
-    registrationLink: REGISTRATION_URL_COPYRIGHTS_TRADEMARK
+    registrationLink: REGISTRATION_URL_COPYRIGHTS_TRADEMARK,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Copyrights & Trademark Workshop are now officially closed. Registered delegates should report to Kaveri Hall at 9:30 AM.'
   },
 
   // --------------------------------------------------------------------------
@@ -190,7 +194,9 @@ export const eventsData: EventItem[] = [
       { name: 'Mr. Mohammed Safaan', phone: '+91 70124 69051', role: 'Student Coordinator' },
       { name: 'Mr. Abdul Salam', phone: '+91 88259 05159', role: 'Student Coordinator' }
     ],
-    registrationLink: REGISTRATION_URL_FINTECH_HACKATHON
+    registrationLink: REGISTRATION_URL_FINTECH_HACKATHON,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for FinTech Hackathon 2026 are now officially closed. Shortlisted teams should report to Podhigai Hall at 8:30 AM.'
   },
   {
     id: 'techkathon-2k26',
@@ -239,7 +245,9 @@ export const eventsData: EventItem[] = [
       { name: 'Dhivyalakshmi S', phone: '+91 63699 98383', role: 'Student Coordinator' },
       { name: 'Techkathon Secretariat', email: 'hackathon@psgcas.ac.in', role: 'Official Email' }
     ],
-    registrationLink: REGISTRATION_URL_TECHKATHON
+    registrationLink: REGISTRATION_URL_TECHKATHON,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Techkathon 2K26 are now officially closed. Shortlisted teams should report to Kaveri Hall at 8:00 AM.'
   },
   {
     id: 'digital-tools-for-business',
@@ -280,7 +288,9 @@ export const eventsData: EventItem[] = [
       'Reporting time: 9:00 AM at Q Block Computer Lab, PSGCAS.',
       'Hands-on lab access will be provisioned for participants.'
     ],
-    registrationLink: REGISTRATION_URL_DIGITAL_TOOLS
+    registrationLink: REGISTRATION_URL_DIGITAL_TOOLS,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Digital Tools for Business Workshop are now officially closed. Registered delegates should report to Q Block Computer Lab at 9:00 AM.'
   },
   {
     id: 'ipo-stocks-poster-presentation',
@@ -356,7 +366,9 @@ export const eventsData: EventItem[] = [
       { name: 'Centre for Innovation Incubation & Entrepreneurship (CII&E)', role: 'Organizing Body' },
       { name: 'Institution’s Innovation Council & E-Cell', role: 'In Association With' }
     ],
-    registrationLink: REGISTRATION_URL_IPO_STOCKS_POSTER
+    registrationLink: REGISTRATION_URL_IPO_STOCKS_POSTER,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for the IPO & Stocks Poster Presentation Competition are now officially closed. Shortlisted presenters should report to the School of Commerce at 9:00 AM.'
   },
 
   // --------------------------------------------------------------------------
