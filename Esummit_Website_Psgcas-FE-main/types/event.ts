@@ -63,6 +63,8 @@ export interface PassTier {
   registrationLink: string;
   popular?: boolean;
   eligibilityDescription?: string;
+  isRegistrationClosed?: boolean;
+  closedMessage?: string;
 }
 
 export interface Speaker {

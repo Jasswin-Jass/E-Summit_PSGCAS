@@ -31,7 +31,9 @@ export const passesData: PassTier[] = [
       'Entrepreneurship Carnival Access',
       'E-Summit Certificate'
     ],
-    registrationLink: REGISTRATION_URL_COMMON_PASS
+    registrationLink: REGISTRATION_URL_COMMON_PASS,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Silver Pass are now officially closed.'
   },
   {
     id: 'gold',
@@ -62,7 +64,9 @@ export const passesData: PassTier[] = [
       'Business Auction (Bid Bizz)'
     ],
     popular: true,
-    registrationLink: REGISTRATION_URL_COMMON_PASS
+    registrationLink: REGISTRATION_URL_COMMON_PASS,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Gold Pass are now officially closed.'
   },
   {
     id: 'platinum',
@@ -94,7 +98,9 @@ export const passesData: PassTier[] = [
       'Startup Expo Access',
       'Direct VC & Incubator Dealroom Interaction'
     ],
-    registrationLink: REGISTRATION_URL_COMMON_PASS
+    registrationLink: REGISTRATION_URL_COMMON_PASS,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Platinum Pass are now officially closed.'
   }
 ];
 

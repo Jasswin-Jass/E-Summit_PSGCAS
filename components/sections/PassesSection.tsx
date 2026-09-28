@@ -129,13 +129,33 @@ export default function PassesSection({ lang = 'en', showComparisonTable = true 
 
                   {/* Register Action CTA */}
                   <div className="pt-2 flex flex-col gap-2">
-                    <div className="w-full py-3.5 rounded-xl font-label-md text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 bg-gray-200 text-gray-700 border border-gray-300 cursor-not-allowed select-none">
-                      <span className="material-symbols-outlined text-[18px] text-gray-500">lock</span>
-                      <span>REGISTRATION CLOSED</span>
-                    </div>
+                    {pass.isRegistrationClosed ? (
+                      <div className="w-full py-3.5 rounded-xl font-label-md text-xs sm:text-sm font-extrabold uppercase tracking-wider bg-slate-200 text-slate-600 border border-slate-300 shadow-sm flex items-center justify-center gap-2 cursor-not-allowed select-none">
+                        <span className="material-symbols-outlined text-[18px] text-slate-500">lock</span>
+                        <span>REGISTRATION CLOSED</span>
+                      </div>
+                    ) : (
+                      <a
+                        href={REGISTRATION_URL_COMMON_PASS}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`w-full py-3.5 rounded-xl font-label-md text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 ${
+                          isPlatinum
+                            ? 'bg-gradient-to-r from-sky-600 via-blue-700 to-[#001634] text-white hover:shadow-lg hover:scale-[1.02]'
+                            : isGold
+                            ? 'bg-gradient-to-r from-secondary-container via-amber-400 to-secondary text-on-secondary-container hover:shadow-lg hover:scale-[1.02]'
+                            : 'bg-primary text-white hover:bg-primary/90'
+                        }`}
+                      >
+                        <span>GET YOUR PASS ({pass.formattedPrice})</span>
+                        <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+                      </a>
+                    )}
 
                     <span className="block text-center text-[10px] text-red-600 font-bold uppercase tracking-wider">
-                      Pass bookings have closed for E-Summit '26
+                      {pass.isRegistrationClosed
+                        ? (pass.closedMessage || 'Pass bookings have closed for E-Summit \'26')
+                        : 'One common form for all passes • Verified email credential'}
                     </span>
                   </div>
 

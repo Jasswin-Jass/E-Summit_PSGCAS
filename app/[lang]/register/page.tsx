@@ -101,12 +101,24 @@ export default async function RegisterPage({ params }: { params: Promise<{ lang:
                 </div>
 
                 <div className="pt-6 mt-4 border-t border-gray-100 flex flex-col gap-2">
-                  <div className="w-full py-3 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-xs uppercase tracking-wider text-center shadow-sm flex items-center justify-center gap-1.5 border border-gray-300 cursor-not-allowed select-none">
-                    <span className="material-symbols-outlined text-[16px] text-gray-500">lock</span>
-                    <span>REGISTRATION CLOSED</span>
-                  </div>
+                  {pass.isRegistrationClosed ? (
+                    <div className="w-full py-3 rounded-xl bg-slate-200 text-slate-600 font-extrabold text-xs uppercase tracking-wider text-center shadow-sm flex items-center justify-center gap-1.5 border border-slate-300 cursor-not-allowed select-none">
+                      <span className="material-symbols-outlined text-[16px] text-slate-500">lock</span>
+                      <span>REGISTRATION CLOSED</span>
+                    </div>
+                  ) : (
+                    <a
+                      href={REGISTRATION_URL_ALL_PASSES}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-[#001634] font-extrabold text-xs uppercase tracking-wider text-center shadow hover:shadow-md transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <span>GET {pass.name}</span>
+                      <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+                    </a>
+                  )}
                   <span className="text-[10px] text-center text-red-600 font-bold uppercase tracking-wide">
-                    Pass bookings closed
+                    {pass.isRegistrationClosed ? (pass.closedMessage || 'Pass bookings closed') : 'https://forms.gle/7vpNQD3wbSWRMdDR6'}
                   </span>
                 </div>
               </div>

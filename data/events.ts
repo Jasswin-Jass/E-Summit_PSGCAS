@@ -411,7 +411,9 @@ export const eventsData: EventItem[] = [
       'Hands-on experience in asset valuation and bidding game-theory',
       'Merit trophies and certificates for Top Enterprise Portfolios'
     ],
-    registrationLink: REGISTRATION_URL_BID_BIZZ
+    registrationLink: REGISTRATION_URL_BID_BIZZ,
+    isRegistrationClosed: true,
+    closedMessage: 'Pass registrations for Bid Bizz are now officially closed. Registered pass holders should report according to the Day 3 schedule.'
   },
   {
     id: 'casequest',
@@ -471,7 +473,9 @@ export const eventsData: EventItem[] = [
       'Evaluation: Feasibility of Solution (20%)',
       'Evaluation: Presentation & Q&A (15%)'
     ],
-    registrationLink: REGISTRATION_URL_CASEQUEST
+    registrationLink: REGISTRATION_URL_CASEQUEST,
+    isRegistrationClosed: true,
+    closedMessage: 'Pass registrations for CaseQuest are now officially closed. Registered teams should report to the venue 15 minutes before commencement.'
   },
   {
     id: 'investors-incubator-summit',
@@ -510,7 +514,9 @@ export const eventsData: EventItem[] = [
       'Incubator on-spot mentoring covenants',
       'High-impact investor-founder dealroom meetings'
     ],
-    registrationLink: REGISTRATION_URL_ISUMMIT
+    registrationLink: REGISTRATION_URL_ISUMMIT,
+    isRegistrationClosed: true,
+    closedMessage: 'Registrations for Investors & Incubator Summit (I-Summit) are now officially closed.'
   },
   {
     id: 'psg-caspreneurs-2026',

@@ -112,7 +112,7 @@ export const scheduleData: ScheduleItem[] = [
     venue: 'PSGCAS Campus Grounds',
     category: 'Carnival',
     day: 3,
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Silver',
     registrationLink: REGISTRATION_URL_ALL_PASSES
   },
@@ -136,7 +136,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Competition',
     day: 3,
     eventSlug: 'bid-bizz',
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Gold or Platinum',
     registrationLink: REGISTRATION_URL_BID_BIZZ
   },
@@ -149,7 +149,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Competition',
     day: 3,
     eventSlug: 'casequest',
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Gold or Platinum',
     registrationLink: REGISTRATION_URL_CASEQUEST
   },
@@ -161,7 +161,7 @@ export const scheduleData: ScheduleItem[] = [
     venue: 'Main Auditorium, PSGCAS',
     category: 'Panel',
     day: 3,
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Silver',
     registrationLink: REGISTRATION_URL_ALL_PASSES
   },
@@ -173,7 +173,7 @@ export const scheduleData: ScheduleItem[] = [
     venue: 'PSGCAS Conclave Lounge',
     category: 'Networking',
     day: 3,
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Gold or Platinum',
     registrationLink: REGISTRATION_URL_ALL_PASSES
   },
@@ -186,7 +186,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Summit',
     day: 3,
     eventSlug: 'investors-incubator-summit',
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Platinum',
     registrationLink: REGISTRATION_URL_ISUMMIT
   },
@@ -211,7 +211,7 @@ export const scheduleData: ScheduleItem[] = [
     venue: 'Main Auditorium, PSGCAS',
     category: 'Valedictory',
     day: 3,
-    registrationStatus: 'pass_required',
+    registrationStatus: 'closed',
     requiredPass: 'Silver',
     registrationLink: REGISTRATION_URL_ALL_PASSES
   }
