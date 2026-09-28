@@ -27,8 +27,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Competition',
     day: 1,
     eventSlug: 'elampreneurs-2026',
-    registrationStatus: 'closed',
-    registrationLink: REGISTRATION_URL_ELAMPRENEUR
+    registrationStatus: 'closed'
   },
   {
     id: 's1-copyrights',
@@ -39,8 +38,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Workshop',
     day: 1,
     eventSlug: 'copyright-trademark-workshop',
-    registrationStatus: 'closed',
-    registrationLink: REGISTRATION_URL_COPYRIGHTS_TRADEMARK
+    registrationStatus: 'closed'
   },
   {
     id: 's1-presummit-orientation',
@@ -66,8 +64,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Hackathon',
     day: 2,
     eventSlug: 'techkathon-2026',
-    registrationStatus: 'closed',
-    registrationLink: REGISTRATION_URL_TECHKATHON
+    registrationStatus: 'closed'
   },
   {
     id: 's2-fintech',
@@ -78,8 +75,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Hackathon',
     day: 2,
     eventSlug: 'fintech-hackathon',
-    registrationStatus: 'closed',
-    registrationLink: REGISTRATION_URL_FINTECH_HACKATHON
+    registrationStatus: 'closed'
   },
   {
     id: 's2-digital-tools',
@@ -90,8 +86,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Workshop',
     day: 2,
     eventSlug: 'digital-tools',
-    registrationStatus: 'closed',
-    registrationLink: REGISTRATION_URL_DIGITAL_TOOLS
+    registrationStatus: 'closed'
   },
   {
     id: 's2-ipo-stocks-poster',
@@ -102,8 +97,7 @@ export const scheduleData: ScheduleItem[] = [
     category: 'Competition',
     day: 2,
     eventSlug: 'ipo-stocks-poster-presentation',
-    registrationStatus: 'closed',
-    registrationLink: REGISTRATION_URL_IPO_STOCKS_POSTER
+    registrationStatus: 'closed'
   },
 
   // --------------------------------------------------------------------------

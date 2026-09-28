@@ -129,24 +129,13 @@ export default function PassesSection({ lang = 'en', showComparisonTable = true 
 
                   {/* Register Action CTA */}
                   <div className="pt-2 flex flex-col gap-2">
-                    <a
-                      href={REGISTRATION_URL_COMMON_PASS}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-full py-3.5 rounded-xl font-label-md text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 ${
-                        isPlatinum
-                          ? 'bg-gradient-to-r from-sky-600 via-blue-700 to-[#001634] text-white hover:shadow-lg hover:scale-[1.02]'
-                          : isGold
-                          ? 'bg-gradient-to-r from-secondary-container via-amber-400 to-secondary text-on-secondary-container hover:shadow-lg hover:scale-[1.02]'
-                          : 'bg-primary text-white hover:bg-primary/90'
-                      }`}
-                    >
-                      <span>GET YOUR PASS ({pass.formattedPrice})</span>
-                      <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-                    </a>
+                    <div className="w-full py-3.5 rounded-xl font-label-md text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 bg-gray-200 text-gray-700 border border-gray-300 cursor-not-allowed select-none">
+                      <span className="material-symbols-outlined text-[18px] text-gray-500">lock</span>
+                      <span>REGISTRATION CLOSED</span>
+                    </div>
 
-                    <span className="block text-center text-[10px] text-on-surface-variant font-medium">
-                      One common form for all passes • Verified email credential
+                    <span className="block text-center text-[10px] text-red-600 font-bold uppercase tracking-wider">
+                      Pass bookings have closed for E-Summit '26
                     </span>
                   </div>
 
@@ -230,15 +219,10 @@ export default function PassesSection({ lang = 'en', showComparisonTable = true 
 
             {/* Quick Registration Row */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-              <a
-                href={REGISTRATION_URL_COMMON_PASS}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-secondary-container via-amber-400 to-secondary text-on-secondary-container font-extrabold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
-              >
-                <span>GET YOUR PASS (OFFICIAL FORM)</span>
-                <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-              </a>
+              <div className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-sm uppercase tracking-wider shadow border border-gray-300 flex items-center justify-center gap-2 cursor-not-allowed select-none">
+                <span className="material-symbols-outlined text-[18px] text-gray-500">lock</span>
+                <span>REGISTRATION CLOSED</span>
+              </div>
             </div>
           </div>
         )}

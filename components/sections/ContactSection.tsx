@@ -157,15 +157,22 @@ export default function ContactSection({ lang = 'en', showHeader = true }: Conta
               {/* Action Button if available */}
               {cat.actionLink && (
                 <div className="pt-4 mt-4 border-t border-gray-100">
-                  <a
-                    href={cat.actionLink.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-2.5 rounded-xl bg-secondary-container text-on-secondary-container font-extrabold text-xs uppercase tracking-wider hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-1.5 shadow-sm"
-                  >
-                    <span>{cat.actionLink.label}</span>
-                    <span className="material-symbols-outlined text-[15px]">open_in_new</span>
-                  </a>
+                  {cat.id === 'registration' || cat.id === 'fintech' ? (
+                    <div className="w-full py-2.5 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-sm border border-gray-300 cursor-not-allowed select-none">
+                      <span className="material-symbols-outlined text-[15px] text-gray-500">lock</span>
+                      <span>REGISTRATION CLOSED</span>
+                    </div>
+                  ) : (
+                    <a
+                      href={cat.actionLink.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-2.5 rounded-xl bg-secondary-container text-on-secondary-container font-extrabold text-xs uppercase tracking-wider hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-1.5 shadow-sm"
+                    >
+                      <span>{cat.actionLink.label}</span>
+                      <span className="material-symbols-outlined text-[15px]">open_in_new</span>
+                    </a>
+                  )}
                 </div>
               )}
             </div>

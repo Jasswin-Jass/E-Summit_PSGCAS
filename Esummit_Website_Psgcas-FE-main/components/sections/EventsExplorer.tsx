@@ -220,15 +220,10 @@ export default function EventsExplorer({
               >
                 COMPARE PASSES
               </Link>
-              <a
-                href={REGISTRATION_URL_ALL_PASSES}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary-container to-amber-400 text-on-secondary-container font-label-sm text-xs uppercase font-extrabold tracking-wider hover:bg-secondary-fixed transition-all shadow flex items-center gap-1"
-              >
-                <span>GET PASS</span>
-                <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-              </a>
+              <span className="px-3.5 py-2 rounded-xl bg-white/15 text-gray-200 font-label-sm text-xs uppercase font-extrabold tracking-wider border border-white/20 flex items-center gap-1.5 cursor-not-allowed select-none">
+                <span className="material-symbols-outlined text-[15px] text-amber-300">lock</span>
+                <span>REGISTRATION CLOSED</span>
+              </span>
             </div>
           </div>
         )}
@@ -346,32 +341,10 @@ export default function EventsExplorer({
                     <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </Link>
 
-                  {event.isRegistrationClosed ? (
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-200/90 text-slate-600 font-label-sm text-[11px] uppercase font-bold flex items-center gap-1 cursor-not-allowed select-none border border-slate-300">
-                      <span className="material-symbols-outlined text-[14px] text-slate-500">lock</span>
-                      <span>CLOSED</span>
-                    </span>
-                  ) : event.isDay3PassEvent ? (
-                    <a
-                      href={event.registrationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-secondary text-white font-label-sm text-[11px] uppercase font-bold hover:shadow-md transition-all shadow-sm flex items-center gap-1"
-                    >
-                      <span>GET PASS</span>
-                      <span className="material-symbols-outlined text-[14px]">confirmation_number</span>
-                    </a>
-                  ) : (
-                    <a
-                      href={event.registrationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-[11px] uppercase font-extrabold hover:bg-secondary-fixed transition-colors shadow-sm flex items-center gap-1"
-                    >
-                      <span>REGISTER</span>
-                      <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                    </a>
-                  )}
+                  <span className="px-3 py-1.5 rounded-lg bg-gray-200 text-gray-700 font-label-sm text-[11px] uppercase font-extrabold tracking-wider border border-gray-300 flex items-center gap-1 cursor-not-allowed select-none shadow-none">
+                    <span className="material-symbols-outlined text-[14px] text-gray-500">lock</span>
+                    <span>REGISTRATION CLOSED</span>
+                  </span>
                 </div>
 
               </div>

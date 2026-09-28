@@ -101,17 +101,12 @@ export default async function RegisterPage({ params }: { params: Promise<{ lang:
                 </div>
 
                 <div className="pt-6 mt-4 border-t border-gray-100 flex flex-col gap-2">
-                  <a
-                    href={REGISTRATION_URL_ALL_PASSES}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-[#001634] font-extrabold text-xs uppercase tracking-wider text-center shadow hover:shadow-md transition-all flex items-center justify-center gap-1.5"
-                  >
-                    <span>GET {pass.name}</span>
-                    <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-                  </a>
-                  <span className="text-[10px] text-center text-gray-500 font-mono truncate">
-                    https://forms.gle/7vpNQD3wbSWRMdDR6
+                  <div className="w-full py-3 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-xs uppercase tracking-wider text-center shadow-sm flex items-center justify-center gap-1.5 border border-gray-300 cursor-not-allowed select-none">
+                    <span className="material-symbols-outlined text-[16px] text-gray-500">lock</span>
+                    <span>REGISTRATION CLOSED</span>
+                  </div>
+                  <span className="text-[10px] text-center text-red-600 font-bold uppercase tracking-wide">
+                    Pass bookings closed
                   </span>
                 </div>
               </div>
@@ -170,22 +165,10 @@ export default async function RegisterPage({ params }: { params: Promise<{ lang:
                 </div>
 
                 <div className="flex sm:flex-col items-center gap-2 w-full sm:w-auto shrink-0">
-                  {event.isRegistrationClosed ? (
-                    <div className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-slate-500 font-extrabold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1 cursor-not-allowed select-none shadow-inner">
-                      <span className="material-symbols-outlined text-[14px] text-slate-400">lock</span>
-                      <span>Closed</span>
-                    </div>
-                  ) : (
-                    <a
-                      href={event.registrationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-extrabold text-xs uppercase tracking-wider text-center hover:bg-secondary-fixed transition-colors shadow-sm flex items-center justify-center gap-1"
-                    >
-                      <span>Register Form</span>
-                      <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                    </a>
-                  )}
+                  <span className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-xs uppercase tracking-wider text-center shadow-sm flex items-center justify-center gap-1 border border-gray-300 cursor-not-allowed select-none">
+                    <span className="material-symbols-outlined text-[14px] text-gray-500">lock</span>
+                    <span>REGISTRATION CLOSED</span>
+                  </span>
                   <Link
                     href={`/${lang}/events/${event.slug}`}
                     className="flex-1 sm:flex-none px-3 py-1.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs uppercase tracking-wider text-center transition-colors"

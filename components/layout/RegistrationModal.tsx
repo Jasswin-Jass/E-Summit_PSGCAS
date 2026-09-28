@@ -61,16 +61,10 @@ export default function RegistrationModal() {
             </ul>
           </div>
 
-          <a
-            href={REGISTRATION_URL_COMMON_PASS}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
-            className="w-full py-3.5 rounded-xl bg-gradient-to-r from-secondary-container via-amber-400 to-secondary text-on-secondary-container font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
-          >
-            <span>Proceed to Official Registration Form</span>
-            <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-          </a>
+          <div className="w-full py-3.5 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 border border-gray-300 cursor-not-allowed select-none">
+            <span className="material-symbols-outlined text-[18px] text-gray-500">lock</span>
+            <span>REGISTRATION CLOSED</span>
+          </div>
 
           <button
             onClick={() => setIsOpen(false)}

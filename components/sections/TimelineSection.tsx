@@ -114,13 +114,19 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
           </div>
 
           {activeDay === 3 ? (
-            <Link
-              href={`/${lang}/tickets`}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary-container to-amber-400 text-on-secondary-container font-label-sm text-xs font-extrabold uppercase tracking-wider shrink-0 shadow flex items-center gap-1.5"
-            >
-              <span className="material-symbols-outlined text-[18px]">confirmation_number</span>
-              <span>GET PASS FOR DAY 3</span>
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link
+                href={`/${lang}/tickets`}
+                className="px-3.5 py-2 rounded-xl bg-primary-container text-surface-container-lowest font-label-sm text-xs font-bold uppercase tracking-wider shrink-0 hover:bg-primary transition-colors flex items-center gap-1.5"
+              >
+                <span>PASS DETAILS</span>
+                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </Link>
+              <span className="px-3.5 py-2 rounded-xl bg-gray-200 text-gray-700 font-label-sm text-xs font-extrabold uppercase tracking-wider shrink-0 shadow-sm flex items-center gap-1.5 border border-gray-300 cursor-not-allowed select-none">
+                <span className="material-symbols-outlined text-[16px] text-gray-500">lock</span>
+                <span>REGISTRATION CLOSED</span>
+              </span>
+            </div>
           ) : (
             <Link
               href={`/${lang}/events?day=${activeDay}`}
@@ -167,7 +173,7 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
 
                 {/* Status / Action CTA */}
                 <div className="shrink-0 flex items-center gap-2 self-end md:self-center">
-                  {item.registrationStatus === 'open' && (
+                  {(item.registrationStatus === 'open' || item.registrationStatus === 'closed') && (
                     <div className="flex items-center gap-2">
                       {item.eventSlug && (
                         <Link
@@ -177,17 +183,10 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
                           Details
                         </Link>
                       )}
-                      {item.registrationLink && (
-                        <a
-                          href={item.registrationLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-4 py-2 rounded-lg bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-sm text-xs uppercase font-extrabold shadow-sm transition-all flex items-center gap-1"
-                        >
-                          <span>Register</span>
-                          <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                        </a>
-                      )}
+                      <span className="px-3 py-1.5 rounded-lg bg-gray-200 text-gray-700 border border-gray-300 font-label-sm text-xs uppercase font-extrabold flex items-center gap-1 cursor-not-allowed select-none">
+                        <span className="material-symbols-outlined text-[14px] text-gray-500">lock</span>
+                        <span>REGISTRATION CLOSED</span>
+                      </span>
                     </div>
                   )}
 
@@ -204,15 +203,10 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
                           Details
                         </Link>
                       )}
-                      <a
-                        href={item.registrationLink || "https://forms.gle/7vpNQD3wbSWRMdDR6"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary/90 text-white font-label-sm text-xs uppercase font-bold shadow-sm transition-colors flex items-center gap-1"
-                      >
-                        <span>Get Pass</span>
-                        <span className="material-symbols-outlined text-[14px]">confirmation_number</span>
-                      </a>
+                      <span className="px-2.5 py-1.5 rounded-lg bg-gray-200 text-gray-700 border border-gray-300 font-label-sm text-xs uppercase font-extrabold flex items-center gap-1 cursor-not-allowed select-none">
+                        <span className="material-symbols-outlined text-[14px] text-gray-500">lock</span>
+                        <span>REGISTRATION CLOSED</span>
+                      </span>
                     </div>
                   )}
 
@@ -220,23 +214,6 @@ export default function TimelineSection({ lang = 'en', initialDay = 1 }: Timelin
                     <div className="flex items-center gap-2">
                       <span className="px-3 py-1 rounded bg-blue-100 text-blue-900 border border-blue-300 font-label-sm text-xs font-bold uppercase">
                         Finalists & Pass Holders
-                      </span>
-                      {item.eventSlug && (
-                        <Link
-                          href={`/${lang}/events/${item.eventSlug}`}
-                          className="px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-xs uppercase font-bold"
-                        >
-                          Details
-                        </Link>
-                      )}
-                    </div>
-                  )}
-
-                  {item.registrationStatus === 'closed' && (
-                    <div className="flex items-center gap-2">
-                      <span className="px-3 py-1 rounded-lg bg-rose-100 text-rose-800 border border-rose-300 font-label-sm text-xs font-bold uppercase flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[14px]">lock</span>
-                        <span>Closed</span>
                       </span>
                       {item.eventSlug && (
                         <Link

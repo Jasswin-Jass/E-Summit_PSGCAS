@@ -380,74 +380,44 @@ export default function EventDetailClient({
 
               {/* Action Button Row */}
               <div className="flex flex-col sm:flex-row gap-3">
-                {event.isRegistrationClosed ? (
-                  <div className="flex-1 py-3.5 px-6 rounded-xl bg-slate-100 border border-slate-300 text-slate-500 font-extrabold text-xs sm:text-sm uppercase tracking-wider text-center flex items-center justify-center gap-2 cursor-not-allowed select-none shadow-inner">
-                    <span className="material-symbols-outlined text-[20px] text-slate-400">lock</span>
-                    <span>REGISTRATIONS CLOSED</span>
-                  </div>
-                ) : event.isDay3PassEvent ? (
-                  <>
-                    <a
-                      href={REGISTRATION_URL_COMMON_PASS}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-[#001634] font-extrabold text-xs sm:text-sm uppercase tracking-wider text-center transition-all shadow hover:shadow-lg flex items-center justify-center gap-2"
-                    >
-                      <span className="material-symbols-outlined text-[18px]">confirmation_number</span>
-                      <span>GET {event.requiredPassTier?.toUpperCase()} PASS</span>
-                    </a>
-                    <Link
-                      href={`/${lang}/tickets`}
-                      className="py-3.5 px-5 rounded-xl bg-primary text-white font-bold text-xs uppercase tracking-wider hover:bg-primary/90 transition-colors flex items-center justify-center gap-1.5"
-                    >
-                      <span>Compare Passes</span>
-                      <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                    </Link>
-                  </>
-                ) : (
-                  <>
-                    <a
-                      href={event.registrationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-secondary-container via-amber-400 to-secondary text-on-secondary-container font-extrabold text-xs sm:text-sm uppercase tracking-wider text-center transition-all shadow hover:shadow-lg flex items-center justify-center gap-2"
-                    >
-                      <span className="material-symbols-outlined text-[20px]">how_to_reg</span>
-                      <span>REGISTER NOW (OFFICIAL FORM)</span>
-                      <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-                    </a>
-                    {event.externalResourceUrl && (
-                      <a
-                        href={event.externalResourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="py-3.5 px-5 rounded-xl bg-[#001634] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#062B55] transition-colors flex items-center justify-center gap-1.5"
-                      >
-                        <span>Guidelines / PPT</span>
-                        <span className="material-symbols-outlined text-[16px]">launch</span>
-                      </a>
-                    )}
-                  </>
+                <div className="flex-1 py-3.5 px-6 rounded-xl bg-gray-200 text-gray-700 font-extrabold text-xs sm:text-sm uppercase tracking-wider text-center flex items-center justify-center gap-2 border border-gray-300 cursor-not-allowed select-none">
+                  <span className="material-symbols-outlined text-[20px] text-gray-500">lock</span>
+                  <span>REGISTRATION CLOSED</span>
+                </div>
+                {event.isDay3PassEvent && (
+                  <Link
+                    href={`/${lang}/tickets`}
+                    className="py-3.5 px-5 rounded-xl bg-primary text-white font-bold text-xs uppercase tracking-wider hover:bg-primary/90 transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <span>Compare Passes</span>
+                    <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </Link>
+                )}
+                {event.externalResourceUrl && (
+                  <a
+                    href={event.externalResourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3.5 px-5 rounded-xl bg-[#001634] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#062B55] transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <span>Guidelines / PPT</span>
+                    <span className="material-symbols-outlined text-[16px]">launch</span>
+                  </a>
                 )}
               </div>
 
               {/* Deadlines & Notice */}
-              <div className={`flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] p-3 rounded-xl border ${event.isRegistrationClosed ? 'bg-rose-50/80 border-rose-200 text-rose-900' : 'bg-amber-50/70 border-amber-200/60 text-on-surface-variant'}`}>
-                <div className="flex items-center gap-2">
-                  <span className={`material-symbols-outlined text-[18px] shrink-0 ${event.isRegistrationClosed ? 'text-rose-600' : 'text-amber-700'}`}>
-                    {event.isRegistrationClosed ? 'cancel' : 'info'}
-                  </span>
-                  <span>
-                    {event.isRegistrationClosed
-                      ? 'Registration deadline has passed. Selected ventures will be contacted directly for Day 3 proceedings.'
-                      : 'Strictly no spot registrations. Carry genuine college / school photo ID on the summit day.'}
-                  </span>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-on-surface-variant bg-red-50/80 p-3 rounded-xl border border-red-200/60">
+                <div className="flex items-center gap-2 text-red-900 font-medium">
+                  <span className="material-symbols-outlined text-red-700 text-[18px] shrink-0">event_busy</span>
+                  <span>Online registration for this event is now closed. Spot registrations are strictly prohibited.</span>
                 </div>
                 {event.registrationDeadline && (
-                  <span className={`font-bold shrink-0 ${event.isRegistrationClosed ? 'text-rose-800' : 'text-amber-900'}`}>
+                  <span className="font-bold text-red-900 shrink-0">
                     Deadline: {event.registrationDeadline}
                   </span>
                 )}
+              </div>
               </div>
             </div>
 
@@ -641,29 +611,10 @@ export default function EventDetailClient({
           </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
-            {event.isDay3PassEvent ? (
-              <a
-                href={REGISTRATION_URL_COMMON_PASS}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-[#001634] font-black text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-[18px]">confirmation_number</span>
-                <span>GET {event.requiredPassTier?.toUpperCase()} PASS</span>
-                <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-              </a>
-            ) : (
-              <a
-                href={event.registrationLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none px-6 py-2.5 rounded-xl bg-gradient-to-r from-secondary-container via-amber-400 to-secondary text-on-secondary-container font-black text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-[18px]">how_to_reg</span>
-                <span>REGISTER NOW</span>
-                <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-              </a>
-            )}
+            <div className="flex-1 sm:flex-none px-6 py-2.5 rounded-xl bg-gray-200 text-gray-700 font-black text-xs sm:text-sm uppercase tracking-wider shadow-sm flex items-center justify-center gap-2 border border-gray-300 cursor-not-allowed select-none">
+              <span className="material-symbols-outlined text-[18px] text-gray-500">lock</span>
+              <span>REGISTRATION CLOSED</span>
+            </div>
           </div>
         </div>
       </div>
