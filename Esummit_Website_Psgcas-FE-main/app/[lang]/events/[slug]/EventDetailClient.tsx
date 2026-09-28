@@ -418,7 +418,6 @@ export default function EventDetailClient({
                   </span>
                 )}
               </div>
-              </div>
             </div>
 
             {/* Long Description / About */}
